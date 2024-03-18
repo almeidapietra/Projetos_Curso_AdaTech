@@ -5,9 +5,10 @@ import { editarProdutosService } from "../services/EditarProdutoService.js";
 import { excluirProdutosService } from "../services/ExcluirProdutoService.js";
 
 class ProdutosController {
-    listar(req, res){
+    listar(req, res, next){
         const produtos = listarProdutosService.execute();
-        return res.send(produtos);
+        res.send(produtos);
+        next(); // necessario para implementar o middleware reponseTime.
     }
 
     buscar(req, res){

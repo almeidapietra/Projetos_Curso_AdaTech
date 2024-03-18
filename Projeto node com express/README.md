@@ -66,7 +66,7 @@ Para contribuir com este projeto, siga as etapas abaixo:
 6. Abra uma solicitação de pull descrevendo suas alterações.
 
 ### Agradecimentos
-Agradeço ao  [iFood] e [Potência Tech](https://potenciatech.com.br/ "Site do Potência Tech"), pela oportunidade de participar do curso através de bolsa de estudos, pelo investimento em meu crescimento profissional, ao professor [Adriano Neves]() por todo conhecimento passado através de uma excelente didática e pela disposição em sempre ajudar.
+Agradeço ao  [iFood] e [Potência Tech](https://potenciatech.com.br/ "Site do Potência Tech"), pela oportunidade de participar do curso através de bolsa de estudos, pelo investimento em meu crescimento profissional, ao professor [Adriano Neres](https://www.linkedin.com/in/adrianoneres/) por todo conhecimento passado através de uma excelente didática e pela disposição em sempre ajudar.
 E não poderia deixar de agradecer à [Ada Tech](https://ada.tech/ "Site da Ada Tech").
 
 ## Meus contatos:
