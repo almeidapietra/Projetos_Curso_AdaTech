@@ -45,13 +45,11 @@ class ProdutosController {
 
     excluir(req, res) {
         const { id } = req.params;
-        const produto = excluirProdutosService.execute(id);
-
-        if (!produto) {
-            return res.status(404).send({mensagem: "Produto não encontrado"});
-        }
-
-        return res.send(produto);
+        const produto = excluirProdutosService.execute(id);      
+        res.send(produto);
+        next();
+    } catch(err) {
+        next(err);
     }
 }
 
