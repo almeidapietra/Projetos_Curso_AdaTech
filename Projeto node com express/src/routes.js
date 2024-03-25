@@ -5,6 +5,7 @@ import { cadastrarProdutosService } from './services/CadrastrarProdutoService.js
 import { infoRequestMiddleware } from './middlewares/infoRequestMiddleware.js';
 import { responseTimeMiddleware } from './middlewares/responseTimeMiddleware.js';
 import { requestDataMiddleware } from './middlewares/requestDataMiddleware.js';
+import { errorHandlerMiddleware } from './middlewares/ErrorHandlerMiddleware .js';
 
 const routes = new Router();
 
@@ -14,7 +15,7 @@ routes.use(requestDataMiddleware.execute);
 routes.use(responseTimeMiddleware.executeBefore);
 //listar produtos:
 routes.get('/produtos', produtosCrontroller.listar);
-routes.use(responseTimeMiddleware.executeAfter); //testando este middleware apenas para listagem
+routes.use(responseTimeMiddleware.executeAfter); //testando esse midleware apernas para esta rota.
 
 //cadastrar produto:
 routes.post('/produtos', produtosCrontroller.cadastrar);
@@ -27,5 +28,7 @@ routes.put('/produtos/:id', produtosCrontroller.editar);
 
 //exluir produto:
 routes.delete('/produtos/:id', produtosCrontroller.excluir);
+
+routes.use(errorHandlerMiddleware.execute);
 
 export {routes};

@@ -11,14 +11,17 @@ class ProdutosController {
         next(); // necessario para implementar o middleware reponseTime.
     }
 
-    buscar(req, res){
-        const { id } = req.params;
-        const produto = buscarProdutosService.execute(id);
+    buscar(req, res, next){
+        try {
+            const { id } = req.params;
+            const produto = buscarProdutosService.execute(id);
 
-        if (!produto) {
-            return res.status(404).send({mensagem: "Produto não encontrado"});
-        }    
-        return res.send(produto);
+            res.send(produto);
+            next();
+        } catch (err) {
+            next(err);
+        }
+        
     }
 
     cadastrar(req, res){
@@ -26,12 +29,17 @@ class ProdutosController {
         return res.status(201).send(produto);
     }
 
-    editar (req, res) {
-        const { id } = req.params;
-        const dadosProduto = req.body;
-        const produto = { id, ...dadosProduto };
-        const produtoEditado = editarProdutosService.execute(produto);
-        return res.send(produto);
+    editar (req, res, next) {
+       try{ 
+            const { id } = req.params;
+            const dadosProduto = req.body;
+            const produto = { id, ...dadosProduto };
+            const produtoEditado = editarProdutosService.execute(produto);
+            res.send(produtoEditado);
+            next();
+       } catch (err) {
+            next(err);
+       }
 
     }
 

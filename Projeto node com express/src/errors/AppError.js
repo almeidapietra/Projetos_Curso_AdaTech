@@ -4,3 +4,5 @@ class AppError {
         this.status = status;
     }
 }
+
+export { AppError };

@@ -10,7 +10,7 @@ class RequestDataMiddleware {
             minute: '2-digit',
             second: '2-digit',
         };
-        console.log( 'Request data: ' + dataAtual.toLocaleString('en-US', options));
+        console.log( 'Request data: ' + dataAtual.toLocaleString('pt-BR', options));
 
         next();
     }
