@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { v4 as uuidv4 } from 'uuid';
 import { produtosCrontroller } from './controllers/ProdutosController';
+import { comprasController } from './controllers/ComprasController';
 import { cadastrarProdutosService } from './services/CadrastrarProdutoService';
 import { infoRequestMiddleware } from './middlewares/infoRequestMiddleware';
 import { responseTimeMiddleware } from './middlewares/responseTimeMiddleware';
@@ -28,6 +29,9 @@ routes.put('/produtos/:id', produtosCrontroller.editar);
 
 //exluir produto:
 routes.delete('/produtos/:id', produtosCrontroller.excluir);
+
+//comprar produtos:
+routes.post('/compras', comprasController.cadastrar);
 
 routes.use(errorHandlerMiddleware.execute);
 
