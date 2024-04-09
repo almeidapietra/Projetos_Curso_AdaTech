@@ -1,9 +1,5 @@
 # Projeto de Controle de produtos [![NPM](https://img.shields.io/npm/l/react)](https://github.com/almeidapietra/Projetos_Curso_AdaTech/blob/main/LICENSE)
 
-### Status: 
-
-Esta aplicação ainda não foi finalizada, está em fase de desenvolvimento.
-
 ## Descrição
 
 Esta é uma aplicação que oferece funcionalidades para cadastro, alteração, listagem e exclusão de produtos. Cada produto é caracterizado por seu nome, preço e id.
